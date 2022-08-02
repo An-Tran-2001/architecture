@@ -93,4 +93,9 @@
 }
 .scroll{
     background: #fff;
+    background-color: rgba(0,0,0,0.7);
+    box-shadow: 0 0.1rem 1rem rgba(0,0,0,1);
+    transition: 0.3s linear;
+    font-size: 0.9rem;
+    height: 3rem;
 }
