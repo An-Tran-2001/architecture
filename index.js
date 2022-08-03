@@ -14,5 +14,5 @@ let interval = setInterval(() => {
     }
 },20);
 document.addEventListener('scroll',()=>{
-  document.getElementsByClassName('container').toggleClass('scroll', window.scrollY > 0);
+  document.querySelector('.nav').classList.toggle('scroll', window.scrollY > 0);
 })
