@@ -13,6 +13,7 @@ let interval = setInterval(() => {
         clearInterval(interval);
         document.querySelector('.slogan').classList.add('slg-animation');
         box_button();
+        document.querySelector('.main').style.display = 'block';
     }
 },5);
 
@@ -37,15 +38,7 @@ function box_button() {
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    c.addEventListener('onmousemove',()=>{
-        ctx.clearRect(0,0,w,h);
-        ctx.beginPath();
-        ctx.moveTo(a,0);
-        list.forEach((value)=>{ctx.lineTo(value[0],value[1]);});
-        ctx.strokeStyle = "white";
-        ctx.lineWidth = 3;
-        ctx.stroke();
-    });
-
+    // button
+    document.querySelector('.button').addEventListener('click',()=>{});
 
 } 
