@@ -1,4 +1,6 @@
 const img_review=document.querySelector('.img-review');
+const practice = document.querySelector('.process');
+
 for(let i=0;i<500;i++){
     let box = document.createElement('div');
     box.classList.add('box');
@@ -14,13 +16,30 @@ let interval = setInterval(() => {
         document.querySelector('.slogan').classList.add('slg-animation');
         box_button();
         document.querySelector('.main').style.display = 'block';
+        count = 0;
     }
 },5);
+
+let process_list = document.querySelectorAll('.arrow');
+console.log(process_list.length);
 
 document.addEventListener('scroll',()=>{
   document.querySelector('.nav').classList.toggle('scroll', window.scrollY > 0);
   document.getElementById('logo').classList.toggle('scroll-logo', window.scrollY > 0);
   document.getElementById('text-logo').classList.toggle('scroll-text-logo', window.scrollY > 0);
+  let count = 0;
+if(window.scrollY + window.innerHeight > practice.offsetTop){
+    let interval_process = setInterval(() => {
+        process_list[count].style.opacity = '1';
+        console.log(count);
+        count++;
+        if (count == process_list.length) {
+            clearInterval(interval_process);
+            count = 0;
+        }
+    },350);
+};
+
 })
 function box_button() {
     //  box button
