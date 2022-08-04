@@ -56,21 +56,57 @@ function box_button() {
     ctx.lineWidth = 3;
     ctx.stroke();
     // hover box button
-    c.addEventListener('mouseover',()=>{
-       let interval_box_button = setInterval(() => {
-        var list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
-        ctx.moveTo(a,0);
-        list.forEach((value)=>{ctx.lineTo(value[0],value[1]);});
-        ctx.strokeStyle = "white";
-        ctx.lineWidth = 3;
-        ctx.stroke();
-        a--;
+    var check = false;
+    c.addEventListener('mouseover',()=>{return check = true;});
+    c.addEventListener('mouseout',()=>{ return check = false;});
+    if (check) {
+        box_button_animation_out()
+    }
+    else {
+        box_button_animation_in()
+    }
+    function box_button_animation_out() {
+        if(a>0){
+            let interval_box_button = setInterval(() => {
+                ctx.globalCompositeOperation='source-out';
+                ctx.beginPath();
+                var list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
+                ctx.moveTo(a,0);
+                list.forEach((value)=>{ctx.lineTo(value[0],value[1]);});
+                ctx.strokeStyle = "white";
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                a--;
 
-        if(a == 0){
-            clearInterval(interval_box_button);
+                if(a == 0){
+                    clearInterval(interval_box_button);
+                    return a = 0;
+                }
+            },1);
         }
-    },10);
-    });
+    }
+    function box_button_animation_in() {
+        if(a<50){
+            if(a<50){
+                let interval_box_button = setInterval(() => {
+                    ctx.globalCompositeOperation='source-out';
+                    ctx.beginPath();
+                    var list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
+                    ctx.moveTo(a,0);
+                    list.forEach((value)=>{ctx.lineTo(value[0],value[1]);});
+                    ctx.strokeStyle = "white";
+                    ctx.lineWidth = 3;
+                    ctx.stroke();
+                    a++;
+                    if(a == 50){
+                        clearInterval(interval_box_button);
+                       return a = 50;
+                    }
+                },1);
+            }
+        }
+    }
+
     // button
     document.querySelector('.button').addEventListener('click',()=>{});
 
