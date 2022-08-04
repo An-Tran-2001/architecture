@@ -47,8 +47,7 @@ function box_button() {
     var c = document.querySelector(".box-button");
     var h = c.offsetHeight;
     var w = c.offsetWidth;
-    const list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
-    console.log(list);
+    var list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(a,0);
@@ -56,7 +55,22 @@ function box_button() {
     ctx.strokeStyle = "white";
     ctx.lineWidth = 3;
     ctx.stroke();
+    // hover box button
+    c.addEventListener('mouseover',()=>{
+       let interval_box_button = setInterval(() => {
+        var list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
+        ctx.moveTo(a,0);
+        list.forEach((value)=>{ctx.lineTo(value[0],value[1]);});
+        ctx.strokeStyle = "white";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+        a--;
 
+        if(a == 0){
+            clearInterval(interval_box_button);
+        }
+    },10);
+    });
     // button
     document.querySelector('.button').addEventListener('click',()=>{});
 
