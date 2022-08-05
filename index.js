@@ -16,22 +16,27 @@ let interval = setInterval(() => {
         document.querySelector('.slogan').classList.add('slg-animation');
         box_button();
         document.querySelector('.main').style.display = 'block';
-        count = 0;
+        document.querySelector('.nav__list').classList.add('nav__list-show');
+        document.querySelector('.head_nav_link').classList.add('head_nav_link-show');
     }
 },5);
-
+let check_scroll=0;
 let process_list = document.querySelectorAll('.arrow');
-console.log(process_list.length);
-
 document.addEventListener('scroll',()=>{
+    if(check_scroll > window.scrollY){
+        document.querySelector('.nav__list').classList.add('nav__list-show');
+    }else{
+        document.querySelector('.nav__list').classList.remove('nav__list-show');
+        check_scroll = window.scrollY;
+    }
   document.querySelector('.nav').classList.toggle('scroll', window.scrollY > 0);
   document.getElementById('logo').classList.toggle('scroll-logo', window.scrollY > 0);
   document.getElementById('text-logo').classList.toggle('scroll-text-logo', window.scrollY > 0);
+  
   let count = 0;
 if(window.scrollY + window.innerHeight > practice.offsetTop){
     let interval_process = setInterval(() => {
         process_list[count].style.opacity = '1';
-        console.log(count);
         count++;
         if (count == process_list.length) {
             clearInterval(interval_process);
@@ -39,15 +44,14 @@ if(window.scrollY + window.innerHeight > practice.offsetTop){
         }
     },350);
 };
-
 })
 function box_button() {
     //  box button
-    var a =50;
+    var a = 50;
     var c = document.querySelector(".box-button");
     var h = c.offsetHeight;
     var w = c.offsetWidth;
-    var list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
+    var list = [[w,0],[w,h+h/2],[0,h+h/2],[0,a],[a,0]];
     var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(a,0);
@@ -55,22 +59,12 @@ function box_button() {
     ctx.strokeStyle = "white";
     ctx.lineWidth = 3;
     ctx.stroke();
-    // hover box button
-    var check = false;
-    c.addEventListener('mouseover',()=>{return check = true;});
-    c.addEventListener('mouseout',()=>{ return check = false;});
-    if (check) {
-        box_button_animation_out()
-    }
-    else {
-        box_button_animation_in()
-    }
-    function box_button_animation_out() {
-        if(a>0){
-            let interval_box_button = setInterval(() => {
+
+    c.addEventListener('mouseover',()=>{
+            let interval_box_button_out = setInterval(() => {
                 ctx.globalCompositeOperation='source-out';
                 ctx.beginPath();
-                var list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
+                const list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
                 ctx.moveTo(a,0);
                 list.forEach((value)=>{ctx.lineTo(value[0],value[1]);});
                 ctx.strokeStyle = "white";
@@ -79,34 +73,33 @@ function box_button() {
                 a--;
 
                 if(a == 0){
-                    clearInterval(interval_box_button);
-                    return a = 0;
+                    clearInterval(interval_box_button_out);
+                    a = 0;
                 }
-            },1);
-        }
-    }
-    function box_button_animation_in() {
-        if(a<50){
-            if(a<50){
-                let interval_box_button = setInterval(() => {
-                    ctx.globalCompositeOperation='source-out';
-                    ctx.beginPath();
-                    var list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
-                    ctx.moveTo(a,0);
-                    list.forEach((value)=>{ctx.lineTo(value[0],value[1]);});
-                    ctx.strokeStyle = "white";
-                    ctx.lineWidth = 3;
-                    ctx.stroke();
-                    a++;
-                    if(a == 50){
-                        clearInterval(interval_box_button);
-                       return a = 50;
-                    }
-                },1);
-            }
-        }
-    }
+            },0.1);
+    });
+    c.addEventListener('mouseout',()=>{
+        let interval_box = setInterval(() => {
+                ctx.globalCompositeOperation='source-out';
+                ctx.beginPath();
+                const list = [[w,0],[w,h+50],[0,h+50],[0,a],[a,0]];
+                ctx.moveTo(a,0);
+                list.forEach((value)=>{ctx.lineTo(value[0],value[1]);});
+                ctx.strokeStyle = "white";
+                ctx.lineWidth = 3;
+                ctx.stroke();
+                a++;
+                if(a >= 50){
+                    clearInterval(interval_box);
+                    a = 50;
+             }
+        },0.1);
 
+    });
+                
+                    
+
+            
     // button
     document.querySelector('.button').addEventListener('click',()=>{});
 

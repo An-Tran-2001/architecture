@@ -34,8 +34,11 @@ body{
     box-sizing: border-box;
     position: fixed;    
     top: 0;
-    background-color: rgba(0,0,0,0.5);
-    box-shadow: 0 0.1rem 5rem rgba(0,0,0,1);
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 0 0.1rem 5rem rgba(0,0,0,0.6);
+}
+.head_nav_link{
+    display: none;
 }
 .nav{
     width: 100vw;
@@ -47,6 +50,9 @@ body{
     display: flex;
     align-items: center;
     column-gap: 20px;
+}
+.nav-list-icon{
+    display:none;
 }
 .nav>a{
     font-family: 'Anthony Hartman', sans-serif;
@@ -121,7 +127,7 @@ body{
     box-sizing: border-box;
 }
 .img-review .box{
-    background: url('img/img-review-1.jpg');
+    background: url('img/img-review-3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -135,6 +141,8 @@ body{
 
 
 .slogan{
+    min-width: 850px;
+    max-width: 1000px;
     display: none;
     position: absolute;
     top: 55%;
@@ -147,6 +155,8 @@ body{
     text-align: center;
     text-shadow: 0 0.1rem 0.1rem rgba(255, 255, 255, 0);
     opacity: 0;
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 5rem 5rem 5rem 50rem rgba(0,0,0,0.3);
 }
 .slogan>h2{
     font-size: 1.5rem;
@@ -165,6 +175,7 @@ body{
     text-align: center;
     line-height: 3.7rem;
     margin-top: 0.5rem;
+    z-index: 1;
 }
 
 .button{
@@ -252,8 +263,8 @@ body{
     transition: 0.5s ease-out;
 }
 .scroll-text-logo{
-    font-family: 'Assthilla Beltaden', cursive;
-    font-size: 3rem;
+    font-family: 'Anthony Hartman', sans-serif;
+    font-size: 1.9rem;
     padding: 0 0.5rem;
     transition: 0.05s opacity linear;
     letter-spacing: 0.1rem;
@@ -336,3 +347,169 @@ body{
     color: #000;
     font-size: 3rem;
 }
+
+@media screen and (max-width: 750px)
+{
+body{
+    position: relative;
+}
+.nav{
+    width: 100%;
+    height:3.5rem;
+    text-align: center;
+    justify-content: center;    
+}
+.logo>h1{
+    margin-left: 1rem;
+    min-width:0px;
+    max-width: 150px;
+    font-size: 1.5rem;
+    margin-left: 0;
+    letter-spacing: 0.1rem;
+}
+#logo{
+    width: 50px;
+    height: 50px;
+}
+.scroll-logo{
+    margin-top: 0;
+}
+.scroll{
+    height: 3.5rem;
+    transition: 0.5s ease-out;
+}
+#text-logo{
+    padding: 0.5rem;
+}
+.slogan{
+    width:80%;
+    max-width: none;
+    min-width: 0    ;
+}
+.slogan>h2{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-top: 0.5rem;
+}
+.slogan>h1{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 0.5rem;
+    z-index: 1;
+    width: 100%;
+    display: none;
+}
+.nav__list{
+    position: fixed;
+    /* bottom: 1rem; */
+    bottom: -10vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    box-sizing: border-box;
+    height: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s ease-out;
+}
+.nav__list-show{
+    bottom: 1rem;
+}
+.box-nav{
+    width: 100%;
+}
+.nav-list{
+    display: none;
+}
+.nav-list-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.nav-list-icon>li{
+    width: 25%;
+    text-align: center;
+}
+.button{
+    display: none;
+}
+.nav-list-icon>svg{
+    position: absolute;
+}
+.nav-list-icon>svg> path{
+    fill: rgba(108, 108, 108, 0.774);
+    stroke: #fff;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-dasharray: 3000;
+    animation: dash 1.5s ease-in-out infinite;
+}
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 3000;
+    }
+    50% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 3000;
+    }
+}
+.head_nav_link{
+    position: fixed;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    row-gap: 0.5rem;
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+    justify-items: center;
+    padding: 1rem 0;
+    transition: 0.5s ease-out;
+}
+.head_nav_link>a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.5s ease-out;
+    z-index: 1;
+}
+.head_nav_link-show{
+    left: 0;
+}
+.head_nav_link>svg{
+    position: absolute;
+}
+.head_nav_link>svg> path{
+    fill: rgba(108, 108, 108, 0.774);
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-linecap: round;
+    stroke-dasharray: 3000;
+}
+.home__social-link {
+    width: max-content;
+    padding: .25rem;
+    border-radius: .25rem;
+    display: flex;
+    font-size: 1rem;
+    transition: .4s;
+}
+.practice-process{
+    display: none;
+}
+}
+
