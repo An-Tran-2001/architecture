@@ -1,99 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="index.css">
+    <title>Thái Miền Architecture</title>
+  </head>
 
-    <title> Thái Miền Architecture</title>
-</head>
-
-<body>
+  <body>
     <header class="header" id="header">
-        
-        <div class="img-review">
-            <div class="slogan">
-                <h2>Welcome to Thái Miền Architecture!</h2>
-                <h1>NIỀM VUI CỦA BẠN LÀ ĐỘNG LỰC CỦA CHÚNG TÔI.</h1>
-                <div class="button">
-                    <canvas class="box-button" id="box-button"></canvas>
-                    <button class="btn-review">
-                        <a href="review.html">LIÊN HỆ NGAY</a>
-                    </button>
-                </div>
-            </div>
-            <div class="head_nav_link">
-                <svg viewBox="0 0 32 165"><path d="M0,0L25,0L32,7L32,165L0,165Z"></path></svg>
-                <a href="#" class="home__social-link"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#" class="home__social-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="home__social-link"><i class="fa-solid fa-robot"></i></a>
-                <a href="#" class="home__social-link"><i class="fa-solid fa-file-circle-question"></i></a>
-            </div>
+      <div class="img-review">
+        <div class="slogan">
+          <h2>Welcome to Thái Miền Architecture!</h2>
+          <h1>NIỀM VUI CỦA BẠN LÀ ĐỘNG LỰC CỦA CHÚNG TÔI.</h1>
+          <div class="button">
+            <canvas class="box-button" id="box-button"></canvas>
+            <button class="btn-review">
+              <a href="review.html">LIÊN HỆ NGAY</a>
+            </button>
+          </div>
+          <div class="logo-mobile">
+            <svg viewBox="0 0 150 200" class="logo-mobile-svg">
+              <path d="M0,0L130,0L150,20L150,200L0,200Z" />
+            </svg>
+            <div class="img-logo-mobile"></div>
+          </div>
+          <div class="button-mobile">
+            <svg viewBox="0 0 130 50" class="button-mobile-svg">
+              <path d="M15,0L130,0L130,35L115,50L0,50L0,15Z" />
+            </svg>
+            <a href="review.html">XEM THÊM</a>
+          </div>
         </div>
-        <nav class="nav container">
-            <a href="index.html" class="logo">
-                <img src="img/logo-1.png" id="logo">
-                <h1 id="text-logo">Thái Miền</h1>
-            </a>
-            <div class="nav__list">
-                <div class="box-nav">
-                    
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="index.html">Trang Chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="service.html">Dịch vụ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="product.html">Sản Phẩm</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html">Liên hệ</a>
-                        </li>
-                    </ul>
-                    <ul class="nav-list-icon">
-                        <svg viewBox="0 0 600 70"><path d="M20,0L600,0L600,50L580,70L0,70L0,20Z"></path></svg>
-                        <li class="nav-item">
-                            <a href="index.html"><i class="fa-solid fa-landmark-dome"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="service.html"><i class="fa-solid fa-briefcase"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="product.html"><i class="fa-solid fa-cart-flatbed-suitcase"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html"><i class="fa-brands fa-facebook-messenger"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div class="head_nav_link">
+          <svg viewBox="0 0 32 165">
+            <path d="M0,0L25,0L32,7L32,165L0,165Z"></path>
+          </svg>
+          <a href="#" class="home__social-link"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="#" class="home__social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="home__social-link"
+            ><i class="fa-solid fa-robot"></i
+          ></a>
+          <a href="#" class="home__social-link"
+            ><i class="fa-solid fa-file-circle-question"></i
+          ></a>
+        </div>
+      </div>
+      <nav class="nav container">
+        <a href="index.html" class="logo">
+          <img src="img/logo-1.png" id="logo" />
+          <h1 id="text-logo">Thái Miền</h1>
+        </a>
+        <div class="nav__list">
+          <div class="box-nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html">Trang Chủ</a>
+              </li>
+              <li class="nav-item">
+                <a href="service.html">Dịch vụ</a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html">Sản Phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html">Liên hệ</a>
+              </li>
+            </ul>
+            <ul class="nav-list-icon">
+              <svg viewBox="0 0 600 70">
+                <path d="M20,0L600,0L600,50L580,70L0,70L0,20Z"></path>
+              </svg>
+              <li class="nav-item">
+                <a href="index.html"
+                  ><i class="fa-solid fa-landmark-dome"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="service.html"><i class="fa-solid fa-briefcase"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html"
+                  ><i class="fa-solid fa-cart-flatbed-suitcase"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html"
+                  ><i class="fa-brands fa-facebook-messenger"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main class="main">
-        <div class="practice-process">
-            <h2>Quy Trình Thực Hiện</h2>
-            <ul class="process">
-                <li class="item-process"><i class="fa-solid fa-cart-arrow-down"></i><p>ĐẶT HÀNG</p></li>
-                <li class="item-process arrow"><i class="fa-solid fa-angles-right"></i></li>
-                <li class="item-process"><i class="fa-solid fa-compass-drafting"></i><p>THIẾT KẾ</p></li>
-                <li class="item-process arrow"><i class="fa-solid fa-angles-right"></i></li>
-                <li class="item-process"><i class="fa-solid fa-person-digging"></i><p>THI CÔNG</p></li>
-                <li class="item-process arrow"><i class="fa-solid fa-angles-right"></i></li>
-                <li class="item-process"><i class="fa-solid fa-clipboard-check"></i><p>NGHIỆM THU</p></li>
-                <li class="item-process arrow"><i class="fa-solid fa-angles-right"></i></li>
-                <li class="item-process"><i class="fa-solid fa-medal"></i><p>BẢO HÀNH</p></li>
-            </ul>
-        </div>
+      <div class="practice-process">
+        <h2>Quy Trình Thực Hiện</h2>
+        <ul class="process">
+          <li class="item-process">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <p>ĐẶT HÀNG</p>
+          </li>
+          <li class="item-process arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </li>
+          <li class="item-process">
+            <i class="fa-solid fa-compass-drafting"></i>
+            <p>THIẾT KẾ</p>
+          </li>
+          <li class="item-process arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </li>
+          <li class="item-process">
+            <i class="fa-solid fa-person-digging"></i>
+            <p>THI CÔNG</p>
+          </li>
+          <li class="item-process arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </li>
+          <li class="item-process">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <p>NGHIỆM THU</p>
+          </li>
+          <li class="item-process arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </li>
+          <li class="item-process">
+            <i class="fa-solid fa-medal"></i>
+            <p>BẢO HÀNH</p>
+          </li>
+        </ul>
+      </div>
     </main>
     <footer class="footer" id="footer">
-        <script src="index.js"></script>
+      <script src="index.js"></script>
     </footer>
-</body>
-
+  </body>
 </html>
