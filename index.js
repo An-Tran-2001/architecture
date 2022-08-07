@@ -24,6 +24,7 @@ let interval = setInterval(() => {
 }, 5);
 let check_scroll = 0;
 let process_list = document.querySelectorAll(".arrow");
+let review_x_y = document.querySelector(".box-review");
 document.addEventListener("scroll", () => {
   if (check_scroll > window.scrollY) {
     document.querySelector(".nav__list").classList.add("nav__list-show");
@@ -40,7 +41,7 @@ document.addEventListener("scroll", () => {
     .classList.toggle("scroll-text-logo", window.scrollY > 0);
 
   let count = 0;
-  if (window.scrollY + window.innerHeight > practice.offsetTop) {
+  if (window.scrollY + window.innerHeight > practice.offsetTop + 50) {
     let interval_process = setInterval(() => {
       process_list[count].style.opacity = "1";
       count++;
@@ -49,6 +50,10 @@ document.addEventListener("scroll", () => {
         count = 0;
       }
     }, 350);
+  }
+
+  if (window.scrollY + window.innerHeight > review_x_y.offsetTop + 50) {
+    review_x_y.classList.add("review-show");
   }
 });
 function box_button() {
