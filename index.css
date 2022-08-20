@@ -360,9 +360,7 @@ body {
 .main {
   display: none;
   width: 100vw;
-  padding: 0.5rem;
   box-sizing: border-box;
-  margin-top: 2.5rem;
 }
 .title {
   font-family: "Roboto", Sans-serif;
@@ -381,7 +379,7 @@ body {
   position: relative;
   box-sizing: border-box;
   padding: 1rem;
-  margin: 2.5rem auto;
+  margin: 3rem auto;
 }
 .review {
   width: 100%;
@@ -488,8 +486,8 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 2rem 0;
   position: relative;
+  padding: 3rem 0;
 }
 .practice-process > ul {
   display: flex;
@@ -626,6 +624,153 @@ body {
 }
 .box__pic_down_home_design_item:hover {
   opacity: 1;
+}
+.room_design {
+  background-color: rgba(39, 39, 39, 0.848);
+  padding: 3rem 0;
+  width: 100%;
+}
+.box_room_design {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.pic_room_design {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(17, 17, 17, 0.97);
+  position: relative;
+}
+.main_pic {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+}
+.main_pic_item {
+  width: 100%;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(17, 17, 17, 0.97);
+}
+.name_pic_room_design {
+  width: 20%;
+  position: absolute;
+  right: 9%;
+  background-color: rgba(93, 93, 93, 0.97);
+  box-shadow: 1rem 0.8rem 0 #000;
+}
+.list_pic_room {
+  width: 100%;
+  display: flex;
+  height: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  background-color: rgba(39, 39, 39, 0.848);
+  position: relative;
+}
+.list_pic_room_items {
+  width: 20%;
+  padding: 0.5rem;
+  z-index: 1;
+  opacity: 0.5;
+}
+.list_pic_room_items > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.list_pic_room_items:hover {
+  opacity: 1;
+}
+.list_button {
+  width: 100%;
+}
+.list_button > button {
+  background: none;
+}
+.list_button > button > i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.list_button > button:hover {
+  background: none;
+}
+.list_button > button:hover > i {
+  color: #000;
+}
+.nav_link_pic_room_design {
+  display: flex;
+  text-align: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav_link_pic_room_design > a {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem 1rem;
+  background-color: rgba(88, 88, 88, 0.601);
+  border-radius: 2rem;
+  color: #fff;
+}
+.nav_link_pic_room_design > a:hover {
+  color: #000;
+  background: #fff;
+  transition: all 0.3s liner;
+}
+.name_room_design_item {
+  width: 100%;
+  font-family: "quicksand", sans-serif;
+  color: #fff;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.name_room_design_item > h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.pic_performer {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0;
+}
+.pic_performer_item {
+  max-width: 60px;
+  height: 60px;
+  margin: 0 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #fff;
+  opacity: 0.5;
+}
+.performer-active {
+  opacity: 1;
+}
+.pic_performer_item:hover {
+  opacity: 1;
+}
+.pic_performer_item > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .active-slide-show {
   opacity: 1;
