@@ -1,11 +1,12 @@
 const img_review = document.querySelector(".img-review");
 const practice = document.querySelector(".process");
-
-for (let i = 0; i < 500; i++) {
+for (let i = 0; i < 400; i++) {
   let box = document.createElement("div");
   box.classList.add("box");
   img_review.appendChild(box);
 }
+background_animation();
+
 let boxs = document.querySelectorAll(".box");
 let count = 0;
 let interval = setInterval(() => {
@@ -22,9 +23,37 @@ let interval = setInterval(() => {
       .classList.add("head_nav_link-show");
   }
 }, 5);
+
+function background_animation() {
+  const list_img_background = [
+    "img/img-review-1.jpg",
+    "img/img-review-2.jpg",
+    "img/img-review-3.jpg",
+    "img/img-review-4.jpg",
+    "img/img-review-5.jpg",
+    "img/img-review-6.jpg",
+  ];
+  let count = 0;
+  const link_background = document.querySelectorAll(".box");
+  let background_interval = setInterval(() => {
+    link_background.forEach((value) => {
+      value.style.background = "url(" + list_img_background[count] + ")";
+      value.style.backgroundSize = "107vh 107vh";
+      value.style.backgroundPosition = "center";
+      value.style.backgroundAttachment = "fixed";
+      value.style.backgroundRepeat = "no-repeat";
+    });
+    count++;
+    if (count == list_img_background.length) {
+      count = 0;
+    }
+  }, 5000);
+}
+
 let check_scroll = 0;
 let process_list = document.querySelectorAll(".arrow");
 let review_x_y = document.querySelector(".box-review");
+
 document.addEventListener("scroll", () => {
   if (check_scroll > window.scrollY) {
     document.querySelector(".nav__list").classList.add("nav__list-show");
@@ -56,8 +85,8 @@ document.addEventListener("scroll", () => {
     review_x_y.classList.add("review-show");
   }
 });
+
 function box_button() {
-  //  box button
   var a = 50;
   var c = document.querySelector(".box-button");
   var h = c.offsetHeight;
@@ -76,60 +105,8 @@ function box_button() {
     ctx.lineTo(value[0], value[1]);
   });
   ctx.strokeStyle = "white";
-  ctx.lineWidth = 3;
+  ctx.lineWidth = 2;
   ctx.stroke();
-
-  c.addEventListener("mouseover", () => {
-    let interval_box_button_out = setInterval(() => {
-      ctx.globalCompositeOperation = "source-out";
-      ctx.beginPath();
-      const list = [
-        [w, 0],
-        [w, h + 50],
-        [0, h + 50],
-        [0, a],
-        [a, 0],
-      ];
-      ctx.moveTo(a, 0);
-      list.forEach((value) => {
-        ctx.lineTo(value[0], value[1]);
-      });
-      ctx.strokeStyle = "white";
-      ctx.lineWidth = 3;
-      ctx.stroke();
-      a--;
-
-      if (a == 0) {
-        clearInterval(interval_box_button_out);
-        a = 0;
-      }
-    }, 0.1);
-  });
-  c.addEventListener("mouseout", () => {
-    let interval_box = setInterval(() => {
-      ctx.globalCompositeOperation = "source-out";
-      ctx.beginPath();
-      const list = [
-        [w, 0],
-        [w, h + 50],
-        [0, h + 50],
-        [0, a],
-        [a, 0],
-      ];
-      ctx.moveTo(a, 0);
-      list.forEach((value) => {
-        ctx.lineTo(value[0], value[1]);
-      });
-      ctx.strokeStyle = "white";
-      ctx.lineWidth = 3;
-      ctx.stroke();
-      a++;
-      if (a >= 50) {
-        clearInterval(interval_box);
-        a = 50;
-      }
-    }, 0.1);
-  });
 
   // button
   // document.querySelector('.button').addEventListener('click',()=>{});
