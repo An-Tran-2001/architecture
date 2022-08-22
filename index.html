@@ -1,337 +1,736 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="index.css" />
+    <title>Thái Miền Architecture</title>
+  </head>
 
-  <title>Thái Miền Architecture</title>
-</head>
-
-<body>
-  <header class="header" id="header">
-    <div class="img-review">
-      <div class="slogan">
-        <h2>Welcome to Thái Miền Architecture!</h2>
-        <h1>NIỀM VUI CỦA BẠN LÀ ĐỘNG LỰC CỦA CHÚNG TÔI.</h1>
-        <div class="button">
-          <canvas class="box-button" id="box-button"></canvas>
-          <button class="btn-review">
-            <a href="review.html">LIÊN HỆ NGAY</a>
-          </button>
-        </div>
-        <div class="logo-mobile">
-          <svg viewBox="0 0 150 200" class="logo-mobile-svg">
-            <path d="M0,0L130,0L150,20L150,200L0,200Z" />
-          </svg>
-          <div class="img-logo-mobile"></div>
-        </div>
-        <div class="button-mobile">
-          <svg viewBox="0 0 130 50" class="button-mobile-svg">
-            <path d="M15,0L130,0L130,35L115,50L0,50L0,15Z" />
-          </svg>
-          <a href="review.html">XEM THÊM</a>
-        </div>
-      </div>
-      <div class="head_nav_link">
-        <svg viewBox="0 0 32 165">
-          <path d="M0,0L25,0L32,7L32,165L0,165Z"></path>
-        </svg>
-        <a href="#" class="home__social-link"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="#" class="home__social-link"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="home__social-link"><i class="fa-solid fa-robot"></i></a>
-        <a href="#" class="home__social-link"><i class="fa-solid fa-file-circle-question"></i></a>
-      </div>
-    </div>
-    <nav class="nav container">
-      <a href="index.html" class="logo">
-        <img src="img/logo-1.png" id="logo" />
-        <h1 id="text-logo">Thái Miền</h1>
-      </a>
-      <div class="nav__list">
-        <div class="box-nav">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="index.html">Trang Chủ</a>
-            </li>
-            <li class="nav-item">
-              <a href="service.html">Dịch vụ</a>
-            </li>
-            <li class="nav-item">
-              <a href="product.html">Sản Phẩm</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html">Liên hệ</a>
-            </li>
-          </ul>
-          <ul class="nav-list-icon">
-            <svg viewBox="0 0 600 70">
-              <path d="M20,0L600,0L600,50L580,70L0,70L0,20Z"></path>
+  <body>
+    <header class="header" id="header">
+      <div class="img-review">
+        <div class="slogan">
+          <h2>Welcome to Thái Miền Architecture!</h2>
+          <h1>NIỀM VUI CỦA BẠN LÀ ĐỘNG LỰC CỦA CHÚNG TÔI.</h1>
+          <div class="button">
+            <canvas class="box-button" id="box-button"></canvas>
+            <button class="btn-review">
+              <a href="review.html">LIÊN HỆ NGAY</a>
+            </button>
+          </div>
+          <div class="logo-mobile">
+            <svg viewBox="0 0 150 200" class="logo-mobile-svg">
+              <path d="M0,0L130,0L150,20L150,200L0,200Z" />
             </svg>
-            <li class="nav-item">
-              <a href="index.html"><i class="fa-solid fa-landmark-dome"></i></a>
+            <div class="img-logo-mobile"></div>
+          </div>
+          <div class="button-mobile">
+            <svg viewBox="0 0 130 50" class="button-mobile-svg">
+              <path d="M15,0L130,0L130,35L115,50L0,50L0,15Z" />
+            </svg>
+            <a href="review.html">XEM THÊM</a>
+          </div>
+        </div>
+        <div class="head_nav_link">
+          <svg viewBox="0 0 32 165">
+            <path d="M0,0L25,0L32,7L32,165L0,165Z"></path>
+          </svg>
+          <a href="#" class="home__social-link"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="#" class="home__social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="home__social-link"
+            ><i class="fa-solid fa-robot"></i
+          ></a>
+          <a href="#" class="home__social-link"
+            ><i class="fa-solid fa-file-circle-question"></i
+          ></a>
+        </div>
+      </div>
+      <nav class="nav container">
+        <a href="index.html" class="logo">
+          <img src="img/logo-1.png" id="logo" />
+          <h1 id="text-logo">Thái Miền</h1>
+        </a>
+        <div class="nav__list">
+          <div class="box-nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html">Trang Chủ</a>
+              </li>
+              <li class="nav-item">
+                <a href="service.html">Dịch vụ</a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html">Sản Phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html">Liên hệ</a>
+              </li>
+            </ul>
+            <ul class="nav-list-icon">
+              <svg viewBox="0 0 600 70">
+                <path d="M20,0L600,0L600,50L580,70L0,70L0,20Z"></path>
+              </svg>
+              <li class="nav-item">
+                <a href="index.html"
+                  ><i class="fa-solid fa-landmark-dome"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="service.html"><i class="fa-solid fa-briefcase"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="product.html"
+                  ><i class="fa-solid fa-cart-flatbed-suitcase"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html"
+                  ><i class="fa-brands fa-facebook-messenger"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="box-review">
+        <svg viewBox="0 0 1000 700">
+          <path
+            d="M0,0L850,0L1000,150L1000,700L150,700L0,550Z"
+            id="review-showshows"
+          />
+        </svg>
+        <div class="review">
+          <div class="main-review-img"></div>
+          <div class="text-review">
+            <h3>HIỆN THỰC NHỮNG GIẤC MƠ - SÁNG TẠO NHỮNG GÌ BẠN MUỐN</h3>
+            <p>
+              Bạn muốn biến những giấc mơ, những ý tưởng về ngôi nhà của mình
+              thành hiện thực? Bạn muốn một bản thiết kế đẹp, độc đáo và giá trị
+              cùng thời gian? Bạn muốn thi công chính xác, hoàn hảo đến từng chi
+              tiết trên bản thiết kế?
+            </p>
+            <span
+              >Tại FI Design, chúng tôi sẽ mang lại cho bạn tất cả điều đó. Với
+              quan điểm mỗi một căn nhà đều có màu sắc riêng, cá tính riêng,
+              chúng tôi luôn lắng nghe mọi ý kiến, sở thích cá nhân để tìm ra
+              phong cách thiết kế phù hợp nhất, mang đậm dấu ấn riêng của gia
+              chủ. Chuyên nghiệp – Tận tâm – Sáng tạo là phương châm hoạt động
+              của FI.
+            </span>
+            <div class="box-exp">
+              <div class="exp">
+                <h1>17 +</h1>
+                <p>Năm kinh nghiệm</p>
+              </div>
+              <div class="exp">
+                <h1>10,000 +</h1>
+                <p>Dự án đã thực hiện</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home_design">
+        <h1 class="title">THIẾT KẾ NHÀ Ở</h1>
+        <p class="bonus_title">
+          Bạn muốn thiết kế nhà ở đẹp, độc đáo, giá trị cùng thời gian?
+        </p>
+        <box class="home_slide">
+          <div class="button_slide_design_home">
+            <button class="button_slide_design_home_left">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="button_slide_design_home_right">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <ul class="box_slide_pic_home_design home-slide-container">
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (1).jpg" />
             </li>
-            <li class="nav-item">
-              <a href="service.html"><i class="fa-solid fa-briefcase"></i></a>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (2).jpg" />
             </li>
-            <li class="nav-item">
-              <a href="product.html"><i class="fa-solid fa-cart-flatbed-suitcase"></i></a>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (3).jpg" />
             </li>
-            <li class="nav-item">
-              <a href="contact.html"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (4).jpg" />
+            </li>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (5).jpg" />
+            </li>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (6).jpg" />
+            </li>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (7).jpg" />
+            </li>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (8).jpg" />
+            </li>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (9).jpg" />
+            </li>
+            <li class="box_slide_pic_home_design_item">
+              <img src="img/home_design/home (10).jpg" />
             </li>
           </ul>
-        </div>
+          <ul class="box_pic_down_home_design list_pic_home">
+            <li class="box__pic_down_home_design_item active-slide-show">
+              <img src="img/home_design/home (1).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (2).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (3).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (4).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (5).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (6).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (7).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (8).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (9).jpg" />
+            </li>
+            <li class="box__pic_down_home_design_item">
+              <img src="img/home_design/home (10).jpg" />
+            </li>
+          </ul>
+        </box>
       </div>
-    </nav>
-  </header>
-  <main class="main">
-    <div class="box-review">
-      <svg viewBox="0 0 1000 700">
-        <path d="M0,0L850,0L1000,150L1000,700L150,700L0,550Z" id="review-showshows" />
-      </svg>
-      <div class="review">
-        <div class="main-review-img"></div>
-        <div class="text-review">
-          <h3>HIỆN THỰC NHỮNG GIẤC MƠ - SÁNG TẠO NHỮNG GÌ BẠN MUỐN</h3>
-          <p>
-            Bạn muốn biến những giấc mơ, những ý tưởng về ngôi nhà của mình
-            thành hiện thực? Bạn muốn một bản thiết kế đẹp, độc đáo và giá trị
-            cùng thời gian? Bạn muốn thi công chính xác, hoàn hảo đến từng chi
-            tiết trên bản thiết kế?
-          </p>
-          <span>Tại FI Design, chúng tôi sẽ mang lại cho bạn tất cả điều đó. Với
-            quan điểm mỗi một căn nhà đều có màu sắc riêng, cá tính riêng,
-            chúng tôi luôn lắng nghe mọi ý kiến, sở thích cá nhân để tìm ra
-            phong cách thiết kế phù hợp nhất, mang đậm dấu ấn riêng của gia
-            chủ. Chuyên nghiệp – Tận tâm – Sáng tạo là phương châm hoạt động
-            của FI.
-          </span>
-          <div class="box-exp">
-            <div class="exp">
-              <h1>17 +</h1>
-              <p>Năm kinh nghiệm</p>
-            </div>
-            <div class="exp">
-              <h1>10,000 +</h1>
-              <p>Dự án đã thực hiện</p>
-            </div>
-          </div>
-        </div>
+      <div class="practice-process">
+        <h1 class="title">Quy Trình Thực Hiện</h1>
+        <ul class="process">
+          <li class="item-process">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <p>ĐẶT HÀNG</p>
+          </li>
+          <li class="item-process arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </li>
+          <li class="item-process">
+            <i class="fa-solid fa-compass-drafting"></i>
+            <p>THIẾT KẾ</p>
+          </li>
+          <li class="item-process arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </li>
+          <li class="item-process">
+            <i class="fa-solid fa-person-digging"></i>
+            <p>THI CÔNG</p>
+          </li>
+          <li class="item-process arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </li>
+          <li class="item-process">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <p>NGHIỆM THU</p>
+          </li>
+          <li class="item-process arrow">
+            <i class="fa-solid fa-angles-right"></i>
+          </li>
+          <li class="item-process">
+            <i class="fa-solid fa-medal"></i>
+            <p>BẢO HÀNH</p>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="home_design">
-      <h1 class="title">THIẾT KẾ NHÀ Ở</h1>
-      <p class="bonus_title">
-        Bạn muốn thiết kế nhà ở đẹp, độc đáo, giá trị cùng thời gian?
-      </p>
-      <ul class="box_slide_pic_home_design">
-        <div class="button_slide_design_home">
-          <button class="button_slide_design_home_left">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="button_slide_design_home_right">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
-        </div>
-        <li class="box_slide_pic_home_design_item slide-show">
-          <img src="img/home_design/home (1).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (2).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (3).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (4).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (5).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (6).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (7).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (8).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (9).jpg" />
-        </li>
-        <li class="box_slide_pic_home_design_item">
-          <img src="img/home_design/home (10).jpg" />
-        </li>
-      </ul>
-      <div class="box_pic_down_home_design">
-        <div class="box__pic_down_home_design_item active-slide-show">
-          <img src="img/home_design/home (1).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (2).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (3).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (4).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (5).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (6).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (7).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (8).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (9).jpg" />
-        </div>
-        <div class="box__pic_down_home_design_item">
-          <img src="img/home_design/home (10).jpg" />
-        </div>
-      </div>
-    </div>
-    <div class="practice-process">
-      <h1 class="title">Quy Trình Thực Hiện</h1>
-      <ul class="process">
-        <li class="item-process">
-          <i class="fa-solid fa-cart-arrow-down"></i>
-          <p>ĐẶT HÀNG</p>
-        </li>
-        <li class="item-process arrow">
-          <i class="fa-solid fa-angles-right"></i>
-        </li>
-        <li class="item-process">
-          <i class="fa-solid fa-compass-drafting"></i>
-          <p>THIẾT KẾ</p>
-        </li>
-        <li class="item-process arrow">
-          <i class="fa-solid fa-angles-right"></i>
-        </li>
-        <li class="item-process">
-          <i class="fa-solid fa-person-digging"></i>
-          <p>THI CÔNG</p>
-        </li>
-        <li class="item-process arrow">
-          <i class="fa-solid fa-angles-right"></i>
-        </li>
-        <li class="item-process">
-          <i class="fa-solid fa-clipboard-check"></i>
-          <p>NGHIỆM THU</p>
-        </li>
-        <li class="item-process arrow">
-          <i class="fa-solid fa-angles-right"></i>
-        </li>
-        <li class="item-process">
-          <i class="fa-solid fa-medal"></i>
-          <p>BẢO HÀNH</p>
-        </li>
-      </ul>
-    </div>
-    <div class="room_design">
-      <h1 class="title">THIẾT Kế PHÒNG</h1>
-      <p class="bonus_title">
-        Biến căn phòng của bạn thành một nơi đẹp mắt với những thiết kế đẹp
-        nhất!
-      </p>
-      <div class="box_room">
+      <div class="room_design">
+        <h1 class="title">THIẾT Kế PHÒNG</h1>
+        <p class="bonus_title">
+          Biến căn phòng của bạn thành một nơi đẹp mắt với những thiết kế đẹp
+          nhất!
+        </p>
         <div class="nav_link_pic_room_design">
-          <a href="">Phòng Khách</a>
-          <a href="">Phòng Ngủ</a>
-          <a href="">Phòng Bếp</a>
-          <a href="">Phòng Thờ</a>
-          <a href="">Phòng Khác</a>
+          <ul style="display: flex">
+            <li class="link-room room-active">Phòng Khách</li>
+            <li class="link-room">Phòng Ngủ</li>
+            <li class="link-room">Phong Bếp</li>
+            <li class="link-room">Phong Thờ</li>
+            <li class="link-room">Phòng Khác</li>
+          </ul>
+          <!-- <nav class="link-room room-active">Phòng Khách</nav>
+          <nav href="" class="link-room">Phòng Ngủ</nav>
+          <a href="" class="link-room">Phòng Bếp</p>
+          <a href="" class="link-room">Phòng Thờ</a>
+          <a href="" class="link-room">Phòng Khác</a> -->
         </div>
-        <section class="box_room_design">
-          <div class="pic_room_design">
-            <div class="button_slide_design_home">
-              <button class="button_slide_design_home_left">
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <button class="button_slide_design_home_right">
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-            <ul class="main_pic slide-container">
+        <ul class="box-room-container">
+          <li class="box-room-items">
+            <section class="box_room_design">
+              <div class="pic_room_design">
+                <div class="button_slide_design_home">
+                  <button class="button_slide_design_home_left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="button_slide_design_home_right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <ul class="main_pic slide-container">
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/living_room/living_room (1).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/living_room/living_room (2).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/living_room/living_room (3).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/living_room/living_room (4).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/living_room/living_room (5).jpg"
+                    />
+                  </li>
+                </ul>
+                <ul class="list_pic_room list_pic_livingroom">
+                  <div class="button_slide_design_home list_button">
+                    <button class="button_slide_design_home_left">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="button_slide_design_home_right">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
+                  <li class="list_pic_room_items active-slide-show">
+                    <img
+                      src="img/room_design/living_room/living_room (1).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/living_room/living_room (2).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/living_room/living_room (3).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/living_room/living_room (4).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/living_room/living_room (5).jpg"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="name_pic_room_design">
+                <div class="name_room_design_item">
+                  <h2>PHÒNG KHÁCH</h2>
+                  <p class="information_room_design">Phong cách: hiện đại</p>
+                  <p class="information_room_design">Kích thước: 30x30x30 m</p>
+                  <p class="information_room_design">
+                    Người thiết kế: Thái Trần
+                  </p>
+                  <p class="information_room_design">
+                    Ngày thiết kế: 20/10/2019
+                  </p>
+                  <p class="information_room_design">Thương hiệu: FI design</p>
+                  <div class="pic_performer">
+                    <div class="pic_performer_item performer-active">
+                      <img src="img/ThaiVan.jpg" />
+                    </div>
+                    <div class="pic_performer_item">
+                      <img src="img/moro_moro.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="box-room-items">
+            <section class="box_room_design">
+              <div class="pic_room_design">
+                <div class="button_slide_design_home">
+                  <button class="button_slide_design_home_left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="button_slide_design_home_right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <ul class="main_pic bethroom-slide-container">
+                  <li class="slide-item">
+                    <img src="img/room_design/bedroom/bedroom (1).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/bedroom/bedroom (2).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/bedroom/bedroom (3).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/bedroom/bedroom (4).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/bedroom/bedroom (5).jpg" />
+                  </li>
+                </ul>
+                <ul class="list_pic_room list_pic_bethroom">
+                  <div class="button_slide_design_home list_button">
+                    <button class="button_slide_design_home_left">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="button_slide_design_home_right">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
+                  <li class="list_pic_room_items active-slide-show">
+                    <img src="img/room_design/bedroom/bedroom (1).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/bedroom/bedroom (2).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/bedroom/bedroom (3).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/bedroom/bedroom (4).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/bedroom/bedroom (5).jpg" />
+                  </li>
+                </ul>
+              </div>
+              <div class="name_pic_room_design">
+                <div class="name_room_design_item">
+                  <h2>PHÒNG NGỦ</h2>
+                  <p class="information_room_design">Phong cách: hiện đại</p>
+                  <p class="information_room_design">Kích thước: 30x30x30 m</p>
+                  <p class="information_room_design">
+                    Người thiết kế: Moro Moro
+                  </p>
+                  <p class="information_room_design">
+                    Ngày thiết kế: 20/10/2019
+                  </p>
+                  <p class="information_room_design">Thương hiệu: FI design</p>
+                  <div class="pic_performer">
+                    <div class="pic_performer_item">
+                      <img src="img/ThaiVan.jpg" />
+                    </div>
+                    <div class="pic_performer_item performer-active">
+                      <img src="img/moro_moro.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="box-room-items">
+            <section class="box_room_design">
+              <div class="pic_room_design">
+                <div class="button_slide_design_home">
+                  <button class="button_slide_design_home_left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="button_slide_design_home_right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <ul class="main_pic kitchen-slide-container">
+                  <li class="slide-item">
+                    <img src="img/room_design/kitchen/kitchen (1).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/kitchen/kitchen (2).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/kitchen/kitchen (3).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/kitchen/kitchen (4).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/kitchen/kitchen (5).jpg" />
+                  </li>
+                </ul>
+                <ul class="list_pic_room list_pic_kitchen">
+                  <div class="button_slide_design_home list_button">
+                    <button class="button_slide_design_home_left">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="button_slide_design_home_right">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
+                  <li class="list_pic_room_items active-slide-show">
+                    <img src="img/room_design/kitchen/kitchen (1).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/kitchen/kitchen (2).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/kitchen/kitchen (3).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/kitchen/kitchen (4).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/kitchen/kitchen (5).jpg" />
+                  </li>
+                </ul>
+              </div>
+              <div class="name_pic_room_design">
+                <div class="name_room_design_item">
+                  <h2>PHÒNG BẾP</h2>
+                  <p class="information_room_design">Phong cách: hiện đại</p>
+                  <p class="information_room_design">Kích thước: 30x30x30 m</p>
+                  <p class="information_room_design">
+                    Người thiết kế: Moro Moro
+                  </p>
+                  <p class="information_room_design">
+                    Ngày thiết kế: 20/10/2019
+                  </p>
+                  <p class="information_room_design">Thương hiệu: FI design</p>
+                  <div class="pic_performer">
+                    <div class="pic_performer_item">
+                      <img src="img/ThaiVan.jpg" />
+                    </div>
+                    <div class="pic_performer_item performer-active">
+                      <img src="img/moro_moro.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="box-room-items">
+            <section class="box_room_design">
+              <div class="pic_room_design">
+                <div class="button_slide_design_home">
+                  <button class="button_slide_design_home_left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="button_slide_design_home_right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <ul class="main_pic bathroom-slide-container">
+                  <li class="slide-item">
+                    <img src="img/room_design/bathroom/bathroom (1).jpg" />
+                  </li>
+                  <li class="slide-item">
+                    <img src="img/room_design/bathroom/bathroom (2).jpg" />
+                    <!-- </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/bathroom/bathroom (3).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/bathroom/bathroom (4).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/bathroom/bathroom (5).jpg"
+                    />
+                  </li> -->
+                  </li>
+                </ul>
 
-              <li class="slide-item">
-                <img src="img/room_design/living_room/living_room (1).jpg" />
-              </li>
-              <li class="slide-item">
-                <img src="img/room_design/living_room/living_room (2).jpg" />
-              </li>
-              <li class="slide-item">
-                <img src="img/room_design/living_room/living_room (3).jpg" />
-              </li>
-              <li class="slide-item">
-                <img src="img/room_design/living_room/living_room (4).jpg" />
-              </li>
-              <li class="slide-item">
-                <img src="img/room_design/living_room/living_room (5).jpg" />
-              </li>
-            </ul>
-            <ul class="list_pic_room">
-              <div class="button_slide_design_home list_button">
-                <button class="button_slide_design_home_left">
-                  <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="button_slide_design_home_right">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
+                <ul class="list_pic_room list_pic_bathroom">
+                  <div class="button_slide_design_home list_button">
+                    <button class="button_slide_design_home_left">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="button_slide_design_home_right">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
+                  <li class="list_pic_room_items active-slide-show">
+                    <img src="img/room_design/bathroom/bathroom (1).jpg" />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img src="img/room_design/bathroom/bathroom (2).jpg" />
+                  </li>
+                  <!-- <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/bathroom/bathroom (3).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/bathroom/bathroom (4).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/bathroom/bathroom (5).jpg"
+                    />
+                  </li> -->
+                </ul>
               </div>
-              <li class="list_pic_room_items active-slide-show">
-                <img src="img/room_design/living_room/living_room (1).jpg" />
-              </li>
-              <li class="list_pic_room_items">
-                <img src="img/room_design/living_room/living_room (2).jpg" />
-              </li>
-              <li class="list_pic_room_items">
-                <img src="img/room_design/living_room/living_room (3).jpg" />
-              </li>
-              <li class="list_pic_room_items">
-                <img src="img/room_design/living_room/living_room (4).jpg" />
-              </li>
-              <li class="list_pic_room_items">
-                <img src="img/room_design/living_room/living_room (5).jpg" />
-              </li>
-            </ul>
-          </div>
-          <div class="name_pic_room_design">
-            <div class="name_room_design_item">
-              <h2>PHÒNG KHÁCH</h2>
-              <p class="information_room_design">Phong cách: hiện đại</p>
-              <p class="information_room_design">Kích thước: 30x30x30 m</p>
-              <p class="information_room_design">Người thiết kế: Thái Trần</p>
-              <p class="information_room_design">Ngày thiết kế: 20/10/2019</p>
-              <p class="information_room_design">Thương hiệu: FI design</p>
-              <div class="pic_performer">
-                <div class="pic_performer_item performer-active">
-                  <img src="img/ThaiVan.jpg" />
-                </div>
-                <div class="pic_performer_item">
-                  <img src="img/moro_moro.jpg" />
+              <div class="name_pic_room_design">
+                <div class="name_room_design_item">
+                  <h2>PHÒNG THỜ</h2>
+                  <p class="information_room_design">Phong cách: hiện đại</p>
+                  <p class="information_room_design">Kích thước: 30x30x30 m</p>
+                  <p class="information_room_design">
+                    Người thiết kế: Thái Trần
+                  </p>
+                  <p class="information_room_design">
+                    Ngày thiết kế: 20/10/2019
+                  </p>
+                  <p class="information_room_design">Thương hiệu: FI design</p>
+                  <div class="pic_performer">
+                    <div class="pic_performer_item performer-active">
+                      <img src="img/ThaiVan.jpg" />
+                    </div>
+                    <div class="pic_performer_item">
+                      <img src="img/moro_moro.jpg" />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </section>
+          </li>
+          <li class="box-room-items">
+            <section class="box_room_design">
+              <div class="pic_room_design">
+                <div class="button_slide_design_home">
+                  <button class="button_slide_design_home_left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="button_slide_design_home_right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+                <ul class="main_pic anotherroom-slide-container">
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (1).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (2).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (3).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (4).jpg"
+                    />
+                  </li>
+                  <li class="slide-item">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (5).jpg"
+                    />
+                  </li>
+                </ul>
+                <ul class="list_pic_room list_pic_anotherroom">
+                  <div class="button_slide_design_home list_button">
+                    <button class="button_slide_design_home_left">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="button_slide_design_home_right">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                  </div>
+                  <li class="list_pic_room_items active-slide-show">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (1).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (2).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (3).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (4).jpg"
+                    />
+                  </li>
+                  <li class="list_pic_room_items">
+                    <img
+                      src="img/room_design/anotherroom/anotherroom (5).jpg"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="name_pic_room_design">
+                <div class="name_room_design_item">
+                  <h2>PHÒNG KHÁC</h2>
+                  <p class="information_room_design">Phong cách: hiện đại</p>
+                  <p class="information_room_design">Kích thước: 30x30x30 m</p>
+                  <p class="information_room_design">
+                    Người thiết kế: Moro Moro
+                  </p>
+                  <p class="information_room_design">
+                    Ngày thiết kế: 20/10/2019
+                  </p>
+                  <p class="information_room_design">Thương hiệu: FI design</p>
+                  <div class="pic_performer">
+                    <div class="pic_performer_item">
+                      <img src="img/ThaiVan.jpg" />
+                    </div>
+                    <div class="pic_performer_item performer-active">
+                      <img src="img/moro_moro.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+        </ul>
       </div>
-      </section>
-    </div>
-  </main>
-  <footer class="footer" id="footer">
-    <script src="index.js"></script>
-  </footer>
-</body>
-
+    </main>
+    <footer class="footer" id="footer">
+      <script src="index.js"></script>
+    </footer>
+  </body>
 </html>
