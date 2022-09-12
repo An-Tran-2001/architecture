@@ -551,7 +551,7 @@ body {
   flex-direction: column;
 }
 .home_slide {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   position: relative;
 }
@@ -564,6 +564,7 @@ body {
   overflow: hidden;
   margin: 0 auto;
   position: relative;
+  scroll-behavior: smooth;
 }
 .button_slide_design_home {
   width: 90%;
@@ -752,6 +753,7 @@ body {
   background-color: rgba(88, 88, 88, 0.601);
   border-radius: 2rem;
   color: #fff;
+  cursor: pointer;
 }
 .link-room:hover {
   color: #000;
@@ -825,6 +827,9 @@ body {
 }
 .active-slide-show {
   opacity: 1;
+}
+.footer {
+  display: none;
 }
 @media screen and (max-width: 1150px) {
   body {

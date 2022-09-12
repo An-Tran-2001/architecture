@@ -18,6 +18,7 @@ let interval = setInterval(() => {
     box_button();
     document.querySelector(".main").style.display = "block";
     document.querySelector(".nav__list").classList.add("nav__list-show");
+    documents.getElementById("footer").style.display = "block";
     document
       .querySelector(".head_nav_link")
       .classList.add("head_nav_link-show");
@@ -198,96 +199,102 @@ const sildeAuto = setInterval(() => {
     );
   }
 }, 5000);
-// bethrooom slide
-const bethroomSlideContainer = document.querySelector(
-  ".bethroom-slide-container"
+// bedrooom slide
+const bedroomSlideContainer = document.querySelector(
+  ".bedroom-slide-container"
 );
-const bethroomSlideThumbnails = document.querySelectorAll(
-  ".list_pic_bethroom li"
+const bedroomSlideThumbnails = document.querySelectorAll(
+  ".list_pic_bedroom li"
 );
-let bethroomCurrentIndex = 0;
+const bedroomPrevSlide = document.querySelectorAll(
+  ".bedroom_button_slide_design_home_left"
+);
+const bedroomNextSlide = document.querySelectorAll(
+  ".bedroom_button_slide_design_home_right"
+);
+let bedroomCurrentIndex = 0;
 
-prevSlide.forEach(
+bedroomPrevSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
-      bethroomSlideContainer.scrollLeft -= slide.clientWidth;
-      if (bethroomCurrentIndex > 0) {
-        bethroomCurrentIndex -= 1;
-        bethroomSlideThumbnails.forEach((element, index) =>
+      bedroomSlideContainer.scrollLeft -= slide.clientWidth;
+      if (bedroomCurrentIndex > 0) {
+        bedroomCurrentIndex -= 1;
+        bedroomSlideThumbnails.forEach((element, index) =>
           element.classList.toggle(
             "active-slide-show",
-            bethroomCurrentIndex === index
+            bedroomCurrentIndex === index
           )
         );
       } else {
-        bethroomCurrentIndex = bethroomSlideThumbnails.length - 1;
-        bethroomSlideContainer.scrollLeft = bethroomSlideContainer.scrollWidth;
-        bethroomSlideThumbnails.forEach((element, index) =>
+        bedroomCurrentIndex = bedroomSlideThumbnails.length - 1;
+        bedroomSlideContainer.scrollLeft = bedroomSlideContainer.scrollWidth;
+        bedroomSlideThumbnails.forEach((element, index) =>
           element.classList.toggle(
             "active-slide-show",
-            bethroomCurrentIndex === index
+            bedroomCurrentIndex === index
           )
         );
       }
     })
 );
 
-nextSlide.forEach(
+bedroomNextSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
-      bethroomSlideContainer.scrollLeft += slide.clientWidth;
-      if (bethroomCurrentIndex < bethroomSlideThumbnails.length - 1) {
-        bethroomCurrentIndex += 1;
-        bethroomSlideThumbnails.forEach((element, index) =>
+      bedroomSlideContainer.scrollLeft += slide.clientWidth;
+      if (bedroomCurrentIndex < bedroomSlideThumbnails.length - 1) {
+        bedroomCurrentIndex += 1;
+        bedroomSlideThumbnails.forEach((element, index) =>
           element.classList.toggle(
             "active-slide-show",
-            bethroomCurrentIndex === index
+            bedroomCurrentIndex === index
           )
         );
       } else {
-        bethroomCurrentIndex = 0;
-        bethroomSlideContainer.scrollLeft = 0;
-        bethroomSlideThumbnails.forEach((element, index) =>
+        bedroomCurrentIndex = 0;
+        bedroomSlideContainer.scrollLeft = 0;
+        bedroomSlideThumbnails.forEach((element, index) =>
           element.classList.toggle(
             "active-slide-show",
-            bethroomCurrentIndex === index
+            bedroomCurrentIndex === index
           )
         );
       }
     })
 );
 
-bethroomSlideThumbnails.forEach((element, index) => {
+bedroomSlideThumbnails.forEach((element, index) => {
   element.onclick = () => {
-    bethroomSlideContainer.scrollLeft +=
-      slide.clientWidth * (index - bethroomCurrentIndex);
-    bethroomCurrentIndex = index;
-    bethroomSlideThumbnails.forEach((element, index) =>
+    bedroomSlideContainer.scrollLeft +=
+      slide.clientWidth * (index - bedroomCurrentIndex);
+    bedroomCurrentIndex = index;
+    bedroomSlideThumbnails.forEach((element, index) =>
       element.classList.toggle(
         "active-slide-show",
-        bethroomCurrentIndex === index
+        bedroomCurrentIndex === index
       )
     );
   };
 });
 
-const bethroomSildeAuto = setInterval(() => {
-  bethroomSlideContainer.scrollLeft += slide.clientWidth;
-  if (bethroomCurrentIndex < bethroomSlideThumbnails.length - 1) {
-    bethroomCurrentIndex += 1;
-    bethroomSlideThumbnails.forEach((element, index) =>
+const bedroomSildeAuto = setInterval(() => {
+  bedroomSlideContainer.scrollLeft += slide.clientWidth;
+  if (bedroomCurrentIndex < bedroomSlideThumbnails.length - 1) {
+    bedroomCurrentIndex += 1;
+    bedroomSlideThumbnails.forEach((element, index) =>
       element.classList.toggle(
         "active-slide-show",
-        bethroomCurrentIndex === index
+        bedroomCurrentIndex === index
       )
     );
   } else {
-    bethroomSlideContainer.scrollLeft = 0;
-    bethroomCurrentIndex = 0;
-    bethroomSlideThumbnails.forEach((element, index) =>
+    bedroomSlideContainer.scrollLeft = 0;
+    bedroomCurrentIndex = 0;
+    bedroomSlideThumbnails.forEach((element, index) =>
       element.classList.toggle(
         "active-slide-show",
-        bethroomCurrentIndex === index
+        bedroomCurrentIndex === index
       )
     );
   }
@@ -299,8 +306,14 @@ const kitchenSlideContainer = document.querySelector(
 const kitchenSlideThumbnails = document.querySelectorAll(
   ".list_pic_kitchen li"
 );
+const kitchenPrevSlide = document.querySelectorAll(
+  ".kitchen_button_slide_design_home_left"
+);
+const kitchenNextSlide = document.querySelectorAll(
+  ".kitchen_button_slide_design_home_right"
+);
 let kitchenCurrentIndex = 0;
-prevSlide.forEach(
+kitchenPrevSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
       kitchenSlideContainer.scrollLeft -= slide.clientWidth;
@@ -324,7 +337,7 @@ prevSlide.forEach(
       }
     })
 );
-nextSlide.forEach(
+kitchenNextSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
       kitchenSlideContainer.scrollLeft += slide.clientWidth;
@@ -389,8 +402,14 @@ const bathroomSlideContainer = document.querySelector(
 const bathroomSlideThumbnails = document.querySelectorAll(
   ".list_pic_bathroom li"
 );
+const bathroomPrevSlide = document.querySelectorAll(
+  ".bathroom_button_slide_design_home_left"
+);
+const bathroomNextSlide = document.querySelectorAll(
+  ".bathroom_button_slide_design_home_right"
+);
 let bathroomCurrentIndex = 0;
-prevSlide.forEach(
+bathroomPrevSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
       bathroomSlideContainer.scrollLeft -= slide.clientWidth;
@@ -414,7 +433,7 @@ prevSlide.forEach(
       }
     })
 );
-nextSlide.forEach(
+bathroomNextSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
       bathroomSlideContainer.scrollLeft += slide.clientWidth;
@@ -479,8 +498,14 @@ const anotherroomSlideContainer = document.querySelector(
 const anotherroomSlideThumbnails = document.querySelectorAll(
   ".list_pic_anotherroom li"
 );
+const anotherPrevSlide = document.querySelectorAll(
+  ".another_button_slide_design_home_left"
+);
+const anotherNextSlide = document.querySelectorAll(
+  ".another_button_slide_design_home_right"
+);
 let anotherroomCurrentIndex = 0;
-prevSlide.forEach(
+anotherPrevSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
       anotherroomSlideContainer.scrollLeft -= slide.clientWidth;
@@ -505,7 +530,7 @@ prevSlide.forEach(
       }
     })
 );
-nextSlide.forEach(
+anotherNextSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
       anotherroomSlideContainer.scrollLeft += slide.clientWidth;
@@ -567,8 +592,14 @@ const anotherroomSildeAuto = setInterval(() => {
 const homeSlideContainer = document.querySelector(".home-slide-container");
 const homeSlideThumbnails = document.querySelectorAll(".list_pic_home li");
 const slideHome = document.querySelector(".box_slide_pic_home_design_item");
+const homePrevSlide = document.querySelectorAll(
+  ".home_button_slide_design_home_left"
+);
+const homeNextSlide = document.querySelectorAll(
+  ".home_button_slide_design_home_right"
+);
 let homeCurrentIndex = 0;
-prevSlide.forEach(
+homePrevSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
       homeSlideContainer.scrollLeft -= slideHome.clientWidth;
@@ -592,7 +623,7 @@ prevSlide.forEach(
       }
     })
 );
-nextSlide.forEach(
+homeNextSlide.forEach(
   (btn) =>
     (btn.onclick = () => {
       homeSlideContainer.scrollLeft += slideHome.clientWidth;
