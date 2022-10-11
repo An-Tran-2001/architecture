@@ -18,10 +18,10 @@ let interval = setInterval(() => {
     box_button();
     document.querySelector(".main").style.display = "block";
     document.querySelector(".nav__list").classList.add("nav__list-show");
-    documents.getElementById("footer").style.display = "block";
     document
       .querySelector(".head_nav_link")
       .classList.add("head_nav_link-show");
+    document.getElementById("footer").classList.add("footer-show");
   }
 }, 5);
 
@@ -672,3 +672,16 @@ const homeSildeAuto = setInterval(() => {
     );
   }
 }, 5000);
+ const slideImg = document.querySelector(".slide-img-row");
+// const SlideAuto = setInterval(() => {
+//   slideImg.scrollBy(0, 10);
+// }, 100);
+var processScroll = true;
+const pageScroll = () => {
+  slideImg.scrollBy(0, 1);
+  if (slideImg.scrollTop >= slideImg.scrollHeight - slideImg.clientHeight) {
+    slideImg.scrollTop = 0;
+  }
+  setTimeout(pageScroll, 30);
+}
+pageScroll()
